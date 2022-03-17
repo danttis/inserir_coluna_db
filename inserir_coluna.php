@@ -20,7 +20,8 @@ $check_sistema->execute();
 	while($array = $check_sistema ->fetch(PDO::FETCH_OBJ)){
 	$id_sistema_sk = $array->id;
 	$id_user = $array->id_usuario;
-		$sql = $conexao->prepare("UPDATE SUA_TABELA SET id_usuario='$id_user' WHERE id_sistema='$id_sistema_sk';");
+     //
+        $sql = $conexao->prepare("UPDATE SUA_TABELA SET id_usuario='$id_user' WHERE id_sistema='$id_sistema_sk';");
         $sql->execute();
 	
 }
